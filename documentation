@@ -1,0 +1,43 @@
+METHODOLOGY:
+   The  ML algorithm used for this face detection was K-nearest neighbours.
+   Also,prebuilt Haar Cascade Classifier was used to detect the face section
+
+
+LIBRARIES USED:
+    1-Numpy
+    2-OpenCV
+
+DATASET:
+   The data_set folder contains three numpy files which represent images of three different people
+   each numpy file containing 30-31 images
+
+
+STEP BY STEP GUIDE:
+    1-Firstly,created a face data collection program which when runs one time collects face
+      data of a single person in the form of .npy file
+
+        The above step includes:
+        a-)Creating a face_cascade object using haar cascade classifier.
+        b-)Continuoulsly,capturing a screenshot from the webcam and saving every tenth image 
+           in the form of numpy array.
+        c-)When webcam captures multiple faces,few lines of code are written to save the image
+           with the largest area.i.e. face closest to webcam and ignore others.
+
+
+    2-Secondly,created a program which is able to distinguish between different faces and
+      display their names above the rectangular frame.
+ 
+         The above step includes:
+         a-)One by one loading images from dataset and assigning them the labels on the basis 
+            their file names,since file name of each .npy file is same as what will be displayed
+            above the rectangular frame.
+        
+         b-)Then,capturing the images from webcam again.These images will be used to predict 
+            the person to which it belongs to.This uses KNN algorithm with 5 nearest neighbours
+            as the default.i.e if no argument is passed by default.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx   
+   
+
+
+
